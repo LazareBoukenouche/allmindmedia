@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: sticky;
+    background-color: #3A3737;
+    width: 100vw;
+    height: 10vh;
+}
+main article  {
+    display: flex;
+    height: 20vh;
+    justify-content: space-around;
+    margin: 2vh;
+    background-image: url('resources/Sans titre (1).png');
+}
+main article div {
+    display: flex;
+    flex-direction: column;
+}
+
+main article:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+header img {
+    height: 10vh;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+a {
+    color:rgb(98, 0, 0);
+    text-decoration: none;
+}
+a:hover {
+    color: white;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-around;
+}
+footer img {
+    width: 5vw;
+}
+footer span {
+    display: block;
+}

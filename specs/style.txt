@@ -1,0 +1,19 @@
+﻿Couleur de fond :
+
+Police :
+taille de texte
+couleur texte
+
+liens : 
+couleur texte
+couleur fond
+couleur texte quand selectionné :
+couleur fond quand selectionné
+
+images : tailles
+
+formulaire : couleur labels
+taille champs
+bouton valider
+
+
