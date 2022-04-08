@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>   
+            <nav>
+                <a href="index.html"><img class="logo" src="resources/Sans titre (12).png" alt="logo"></a>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html">Nos Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="contact">
+            <h1>Contact </h1>
+            <form action="contact.php" method="post">
+        
+                <div>
+                    <div id="id_name">
+                        <label for="id_name">Nom</label>
+                    </div>
+                    <div>
+                        <input type="text" name="name" maxlength="100" required="" id="id_name">
+                    </div>
+                </div>
+        
+                <div>
+                    <div id="id_firstname">
+                        <label for="id_firstname">Prénom</label>
+                    </div>
+                    <div>
+                        <input type="text" name="firstName" maxlength="100" required="" id="id_firstname">
+                    </div>
+                </div>
+        
+                <div>
+                    <div id="id_phone_number">
+                        <label for="id_phone_number">Tel</label>
+                    </div>
+                    <div>
+                        <input type="tel" name="phone_number" required="" id="id_phone_number">
+                    </div>
+                </div>
+        
+                <div>
+                    <div id="id_email">
+                        <label for="id_email">Email</label>
+                    </div>
+                    <div>
+                        <input type="email" name="email" required="" id="id_email">
+                    </div>
+                </div>
+        
+                <div>
+                    <div id="id_service">
+                        <label for="id_service">Service</label>
+                    </div>
+                    
+                    <div>
+                        <select name="service" id="service-select">
+                        <option value="">--Service--</option>
+                        <option value="youtube">Youtube</option>
+                        <option value="twitch">Twitch</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="tiktok">Tiktok</option>
+                        </select>
+                    </div>
+                </div>
+        
+                <div>
+                    <div id="id_message">
+                        <label for="id_message">Message</label>
+                    </div>
+                    <div>
+                        <input type="textarea" rows="10" cols="50" name="message" required="" id="id_message">
+                    </div>
+                </div>
+        
+                    <button type="submit">Valider</button>
+                </form>
+        </main>
+        <footer>
+            <ul>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href=""><img src="resources/logo_instagram_mobile_portrait.png" alt=""></a></li>
+                <li><a href=""><img src="resources/logo_facebook_mobile_portrait.png" alt=""></a></li>
+            </ul>
+            <span>
+                Mentions légales bla bla bla...
+                Mentions légales bla bla bla...
+            </span>
+        </footer>
+        <script src="js/main.js"></script>
+    </body>
+</html>

@@ -1,58 +1,227 @@
-body {
-    margin: 0;
-    padding: 0;
+:root {
+    --link-color: rgb(98, 0, 0);
+    --link-color-hover: white;
+    --link-bg-color: white;
+    --link-bg-color-hover: rgb(98, 0, 0); 
+    --header-bg-color: rgb(168, 164, 164); 
+    --footer-bg-color: rgb(168, 164, 164); 
+    --main-bg-color: rgb(119, 117, 117); 
 }
 
-header {
-    position: sticky;
-    background-color: #3A3737;
+body,header,main,footer {
     width: 100vw;
-    height: 10vh;
-}
-main article  {
-    display: flex;
-    height: 20vh;
-    justify-content: space-around;
-    margin: 2vh;
-    background-image: url('resources/Sans titre (1).png');
-}
-main article div {
-    display: flex;
-    flex-direction: column;
 }
 
-main article:nth-child(odd) {
-    flex-direction: row-reverse;
-}
-header img {
-    height: 10vh;
-}
-
-header ul {
-    display: flex;
-    justify-content: space-around;
+body,header,main,footer,nav,ul,li {
     margin: 0;
     padding: 0;
+}
+
+body {
+    display:grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 5vh;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer";
+}
+
+a {
+    color:var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color:var(--link-color-hover);
+}
+
+h1 {
+    font-size: 1.4em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+h3 {
+    font-size: 1.2em;
 }
 
 li {
     list-style-type: none;
 }
-a {
-    color:rgb(98, 0, 0);
-    text-decoration: none;
+
+p {
+    font-size: 1em;
 }
-a:hover {
+
+header {
+    grid-area: header;
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: var(--header-bg-color);
+    max-height: 5vh;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+header nav > a:first-child  {
+    flex-grow: 1;
+    max-width: 15%;
+    height: 100%;
+}
+
+header nav > a:first-child img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+header nav ul {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    flex-grow: 3;
+}
+
+header ul li {
+    color:var(--link-color-hover);
+}
+
+header ul li a {
+    color:var(--link-color); 
+    text-align: center;
+}
+
+header ul li a:hover {
+    color:var(--link-color-hover); 
+}
+
+main.acceuil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    grid-area: main;
+    grid-gap: 5vh;
+}
+
+main.acceuil article {
+    display: grid;
+    height: 33vh;
+    width: 90vw;
+    gap: 2vw 2vw;
+    place-items: center;
+    box-shadow: 1px black;
+}
+
+main.acceuil article:nth-child(odd) {
+    grid-template-areas: 
+    "img img img texts texts"
+    "img img img texts texts"
+    "img img img texts texts"
+    "img img img texts texts"
+    "link link link link link";
+}
+
+main.acceuil article:nth-child(even) {
+    grid-template-areas: 
+    "texts texts img img img"
+    "texts texts img img img"
+    "texts texts img img img"
+    "texts texts img img img"
+    "link link link link link";
+}
+
+main.acceuil article img {
+    max-width: 100%;
+    max-height: 100%;
+    grid-area:img;
+    
+    
+}
+
+main.acceuil article a {
+    grid-area:link;
+    
+}
+
+main.acceuil article a:hover {
     color: white;
+    background-color: rgb(98, 0, 0);
+}
+
+main.acceuil article p {
+    grid-area:texts;
+    margin: 0; 
+}
+
+main.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    row-gap: 2vh;
+}
+
+main.services article{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    row-gap: 2vh;
+    border: 1px solid;
+}
+
+main.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: space-around;
+    row-gap: 2vh;
+    text-align: center;
+}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    grid-area: footer;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
 }
 
 footer ul {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    width: 80%;
 }
-footer img {
-    width: 5vw;
-}
+
 footer span {
-    display: block;
+    color: white;
+    text-align: center;
 }
+
+
