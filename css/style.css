@@ -8,6 +8,12 @@
     --main-bg-color: rgb(119, 117, 117); 
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 body,header,main,footer {
     width: 100vw;
 }
@@ -184,7 +190,6 @@ main.services article{
 main.contact {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
